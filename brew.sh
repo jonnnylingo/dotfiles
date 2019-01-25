@@ -78,11 +78,11 @@ brew tap homebrew/services
 # Install other useful binaries.
 #brew install exiv2
 brew install git
-brew install git-lfs
-brew install imagemagick --with-webp
+# brew install git-lfs
+# brew install imagemagick --with-webp
 brew install ssh-copy-id
-brew install tree
-brew install webkit2png
+# brew install tree
+# brew install webkit2png
 brew install wget
 
 # Remove outdated versions from the cellar.

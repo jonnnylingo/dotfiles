@@ -16,5 +16,5 @@ After interacting with socketfilterfw, you may want to restart (or terminate) th
 
 sudo pkill -HUP socketfilterfw
 
-Install Little Snith 3
+Install Little Snitch 3
 https://www.obdev.at/products/littlesnitch/index.html
