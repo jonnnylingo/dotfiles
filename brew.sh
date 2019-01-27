@@ -96,5 +96,4 @@ brew install zsh-completions
 brew cleanup
 
 # Install mac app store apps
-# ./brewfile.sh
-mas install "Typeeto", id: 970502923
+brew bundle
