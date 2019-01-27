@@ -18,11 +18,11 @@ brew upgrade
 brew install coreutils
 
 # Install some other useful utilities like `sponge`.
-brew install moreutils
+# brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew install findutils
+# brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+# brew install gnu-sed --with-default-names
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
@@ -40,10 +40,10 @@ fi;
 brew install wget --with-iri
 
 # Install more recent versions of some macOS tools.
-brew install vim --with-override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+# brew install vim --with-override-system-vi
+# brew install homebrew/dupes/grep
+# brew install homebrew/dupes/openssh
+# brew install homebrew/dupes/screen
 # brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
@@ -89,6 +89,8 @@ brew install ssh-copy-id
 # brew install tree
 # brew install webkit2png
 # brew install wget
+brew install zsh
+brew install zsh-completions
 
 # Remove outdated versions from the cellar.
 brew cleanup
