@@ -5,10 +5,6 @@ if !hash brew 2>/dev/null; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi;
 
-if !hash mas 2>/dev/null; then
-  brew install mas
-fi;
-
 # Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.
@@ -51,10 +47,10 @@ brew install homebrew/dupes/screen
 # brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
-brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
+# brew tap bramstein/webfonttools
+# brew install sfnt2woff
+# brew install sfnt2woff-zopfli
+# brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 # brew install aircrack-ng
@@ -92,7 +88,10 @@ brew install git
 brew install ssh-copy-id
 # brew install tree
 # brew install webkit2png
-brew install wget
+# brew install wget
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Install mac app store apps
+./brewfile.sh
