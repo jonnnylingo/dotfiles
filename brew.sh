@@ -94,4 +94,5 @@ brew install ssh-copy-id
 brew cleanup
 
 # Install mac app store apps
-./brewfile.sh
+# ./brewfile.sh
+mas install "Typeeto", id: 970502923
