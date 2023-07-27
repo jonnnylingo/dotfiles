@@ -1,0 +1,57 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+brew "chezmoi"
+brew "gh"
+brew "mas"
+brew "nvm"
+brew "iterm2"
+brew "1password"
+brew "craft"
+brew "github"
+brew "bartender"
+brew "istat-menus"
+brew "gitgraken"
+brew "intellij-idea"
+brew "webstorm"
+brew "azure-data-studio"
+brew "capto"
+brew "fantastical"
+brew "carbon-copy-cloner"
+brew "tripmode"
+brew "postman"
+brew "hazel"
+brew "lazydocker"
+brew "tailscale"
+cask "textexpander"
+
+{{- if eq .location "home" }}
+cask 'microsoft-teams'
+cask 'microsoft-office'
+brew "viscosity"
+{{- end }}
+
+
+mas "AutoMounter", id: 1160435653
+mas "Copy 'Em", id: 876540291
+mas "Day One", id: 1055511498
+mas "Magnet", id: 441258766
+mas "Pixelmator Pro", id: 1289583905
+mas "ToothFairy", id: 1191449274
+mas "Typeeto", id: 970502923
+
+
+#mas "2Do", id: 477670270
+#mas "Bear", id: 1091189122
+mas "CheatSheet", id: 529456740
+mas "DaisyDisk", id: 411643860
+#mas "Fantastical 2", id: 975937182
+#mas "GarageBand", id: 682658836
+#mas "GIF Keyboard", id: 1043270657
+#mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "MindNode", id: 992076693
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+#mas "Twins Mini", id: 540383737
