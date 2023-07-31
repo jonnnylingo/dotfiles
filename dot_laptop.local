@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+
+info_echo "Installing or updating chezmoi ..."
+brew bundle --file=- <<EOF
+    brew 'chezmoi'
+EOF
+if [ ! -f "$HOME/.config/chezmoi/chezmoi.toml" ]; then
+  info_echo "Applying dotfiles with chezmoi ..."
+  chezmoi init --apply --verbose https://github.com/jonnnylingo/dotfiles.git
+  chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
+fi
+
+if [ -f "$HOME/.laptop.node" ]; then
+  # shellcheck source=/dev/null
+  . "$HOME/.laptop.node"
+fi
