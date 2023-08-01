@@ -42,3 +42,8 @@ Look-up Homebrew Formlae: [https://formulae.brew.sh/cask/](https://formulae.brew
 
 The Unofficial guide to dotfiles on GitHub: [https://dotfiles.github.io/](https://dotfiles.github.io/)
 
+
+### To Remove current dot files to run .laptop.local from github again
+```shell
+rm .aliases;rm .b*;sudo rm -r .config;rm .curlrc;rm .e*;rm .functions;rm .g*;rm .hushlogin;rm .inputrc;rm .laptop.local;sudo rm -r .local;rm .macos;rm .nvm;rm .screenrc;rm .wgetrc;sudo rm -r .zsh_sessions;rm .z*;
+```
