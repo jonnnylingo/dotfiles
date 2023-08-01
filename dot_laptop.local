@@ -7,6 +7,9 @@ if ! command -v brew &> /dev/null; then
     echo "Homebrew is not installed. Installing..."
     # Install Homebrew (you can find the latest command at brew.sh)
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jonnnylingo/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    source /Users/jonnnylingo/.zprofile
 
     # Check if installation was successful
     if ! command -v brew &> /dev/null; then
