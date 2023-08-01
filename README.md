@@ -33,3 +33,12 @@ See [Brewfile.local.tmpl](https://github.com/monfresh/dotfiles/blob/master/Brewf
 When prompted for the various tokens, get them from 1Password and paste them in.
 
 3. Restart the computer.
+
+---
+
+
+### Other Resources
+Look-up Homebrew Formlae: [https://formulae.brew.sh/cask/](https://formulae.brew.sh/cask/)
+
+The Unofficial guide to dotfiles on GitHub: [https://dotfiles.github.io/](https://dotfiles.github.io/)
+
