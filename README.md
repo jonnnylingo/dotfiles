@@ -60,7 +60,7 @@ rm .aliases;rm .b*;sudo rm -r .config;rm .curlrc;rm .e*;rm .functions;rm .g*;rm 
 
 ### To archive current dot files to a new folder named dot_archive
 ```shell
-mv .aliases dot_archive; mv .b* dot_archive; sudo mv -r .config dot_archive; mv .curlrc dot_archive; mv .e* dot_archive; mv .functions dot_archive; mv .g* dot_archive; mv .hushlogin dot_archive; mv .inputrc dot_archive; mv .laptop.local dot_archive; sudo mv -r .local dot_archive; mv .macos dot_archive; mv .nvm dot_archive; mv .screenrc dot_archive; mv .wgetrc dot_archive; sudo mv -r .zsh_sessions dot_archive; mv .z* dot_archive;
+mkdir dot_archive;mv .aliases dot_archive; mv .b* dot_archive; mv .config dot_archive; mv .curlrc dot_archive; mv .e* dot_archive; mv .functions dot_archive; mv .g* dot_archive; mv .hushlogin dot_archive; mv .inputrc dot_archive; mv .laptop.local dot_archive; mv .local dot_archive; mv .macos dot_archive; mv .nvm dot_archive; mv .screenrc dot_archive; mv .wgetrc dot_archive; mv .zsh_sessions dot_archive; mv .z* dot_archive;
 ```
 
 ---
