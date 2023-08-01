@@ -58,6 +58,11 @@ The Unofficial guide to dotfiles on GitHub: [https://dotfiles.github.io/](https:
 rm .aliases;rm .b*;sudo rm -r .config;rm .curlrc;rm .e*;rm .functions;rm .g*;rm .hushlogin;rm .inputrc;rm .laptop.local;sudo rm -r .local;rm .macos;rm .nvm;rm .screenrc;rm .wgetrc;sudo rm -r .zsh_sessions;rm .z*;
 ```
 
+### To archive current dot files to a new folder named dot_archive
+```shell
+mv .aliases dot_archive; mv .b* dot_archive; sudo mv -r .config dot_archive; mv .curlrc dot_archive; mv .e* dot_archive; mv .functions dot_archive; mv .g* dot_archive; mv .hushlogin dot_archive; mv .inputrc dot_archive; mv .laptop.local dot_archive; sudo mv -r .local dot_archive; mv .macos dot_archive; mv .nvm dot_archive; mv .screenrc dot_archive; mv .wgetrc dot_archive; sudo mv -r .zsh_sessions dot_archive; mv .z* dot_archive;
+```
+
 ---
 TODO: 
 - [ ] Automatically set macOs settings using the executable_dot_macos file.
