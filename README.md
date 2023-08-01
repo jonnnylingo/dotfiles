@@ -10,6 +10,13 @@ This repo contains all the scripts I use to set up a new Mac, and to keep my dot
 - Apple TV, Music
 - Others?
 
+To Create Brewfile:
+```shell
+brew bundle dump
+```
+Then copy contents into Brewfile.tmpl
+
+
 ## Set up new Mac
 
 1. Sign in to iCloud and App Store, otherwise installing apps via [mas](https://github.com/mas-cli/mas) won’t work.
