@@ -21,7 +21,7 @@ Then copy contents into Brewfile.tmpl
 
 1. Sign in to iCloud and App Store, otherwise installing apps via [mas](https://github.com/mas-cli/mas) won’t work.
 
-2. Download `.laptop.local`:
+2. Download and execute `.laptop.local`:
 ```shell
 cd ~; curl --remote-name https://raw.githubusercontent.com/jonnnylingo/dotfiles/main/dot_laptop.local; mv dot_laptop.local .laptop.local; chmod 744 .laptop.local;./.laptop.local
 ```
