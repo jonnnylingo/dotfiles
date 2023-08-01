@@ -31,6 +31,7 @@ if [ ! -f "$HOME/.config/chezmoi/chezmoi.toml" ]; then
   source ~/.zshrc
 fi
 
+echo "Installing Apps w/ brew bundle..."
 brew bundle
 
 if [ -f "$HOME/.laptop.node" ]; then
