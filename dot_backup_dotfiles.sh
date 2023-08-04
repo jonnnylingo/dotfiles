@@ -5,11 +5,12 @@ BACKUP_FOLDER=".backup"
 
 # Rename old .backup file if it exists
 if [ -d ~/${BACKUP_FOLDER} ]; then
-  timestamp=$(date +%Y-%m-%d$Y)
-  printf "Renaming  existing backup file to: ~/${BACKUP_FOLDER}-$timestamp\n";
+  timestamp=$(date +%Y-%m-%d$Y-%H%M%S)
+  printf "Renaming  existing backup file to: ~/${BACKUP_FOLDER}-$timestamp\n"
   mv ~/${BACKUP_FOLDER} ~/${BACKUP_FOLDER}-$timestamp
+  mkdir -p ~/${BACKUP_FOLDER}
 else
-  mkdir ~/${BACKUP_FOLDER}
+  mkdir -p ~/${BACKUP_FOLDER}
 fi
 
 # Copy all hidden files to the backup folder
