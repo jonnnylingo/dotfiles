@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Set toml filename
+TOML_FILE="$HOME/.config/chezmoi/chezmoi.toml"
+
+# Make it happen
+refresh_dot_files() {
+  echo "Applying dotfiles with chezmoi ..."
+  chezmoi init --apply --verbose https://github.com/jonnnylingo/dotfiles.git
+  chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
+  source ~/.zshrc
+}
+
+if [ -f ${TOML_FILE} ]; then
+  echo "Backing up .config/chezmoi/chezmoi.toml"
+  timestamp=$(date +%Y-%m-%d$Y-%H%M%S)
+  mv ${TOML_FILE} ${TOML_FILE}-timestamp
+fi
+
+refresh_dot_files
