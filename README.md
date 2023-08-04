@@ -45,8 +45,14 @@ Copy all your ".something" files into the corresponding "dot_something" file in 
 3. Restart the computer.
 
 ---
+# Maintenance
+If you want to refresh dot files on your current Mac, just run:
+```shell
+curl -O https://raw.githubusercontent.com/jonnnylingo/dotfiles/main/dot_backup_dotfiles.sh; sudo chmod +x dot_backup_dotfiles.sh; ./dot_backup_dotfiles.sh
+```
+This will download the dot_backup_dotfiles.sh script, make it executable, and run it.  The script will take all your ~/.* files and copy them to a .dot_backkup file so you can refresh all your dot files from the repo.  
 
-
+---
 ### Other Resources
 Look-up Homebrew Formlae: [https://formulae.brew.sh/cask/](https://formulae.brew.sh/cask/)
 
