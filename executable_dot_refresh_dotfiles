@@ -2,6 +2,7 @@
 
 # Set toml filename
 TOML_FILE="$HOME/.config/chezmoi/chezmoi.toml"
+TIMESTAMP=$(date +%Y-%m-%d$Y-%H%M%S)
 
 # Make it happen
 refresh_dot_files() {
@@ -13,8 +14,7 @@ refresh_dot_files() {
 
 if [ -f ${TOML_FILE} ]; then
   echo "Backing up .config/chezmoi/chezmoi.toml"
-  timestamp=$(date +%Y-%m-%d$Y-%H%M%S)
-  mv ${TOML_FILE} ${TOML_FILE}-timestamp
+  mv ${TOML_FILE} ${TOML_FILE}-${TIMESTAMP}
 else
   brew install chezmoi
 fi
@@ -25,8 +25,7 @@ refresh_dot_files
 #install oh-my-zsh
 echo "backing up .oh-my-zsh"
 if [ -d ~/.oh-my-zsh ]; then
-  timestamp=$(date +%Y-%m-%d$Y-%H%M%S)
-  mv ~/.oh-my-zsh ~/.oh-my-zsh-${timestamp}
+  mv ~/.oh-my-zsh ~/.oh-my-zsh-${TIMESTAMP}
 fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
