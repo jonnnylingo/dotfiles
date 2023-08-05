@@ -23,6 +23,11 @@ fi
 refresh_dot_files
 
 #install oh-my-zsh
+echo "backing up .oh-my-zsh"
+if [ -d ~/.oh-my-zsh ]; then
+  timestamp=$(date +%Y-%m-%d$Y-%H%M%S)
+  mv ~/.oh-my-zsh ~/.oh-my-zsh-timestamp
+fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 sed -i '1s/^/\source .bashrc\n/' ~/.zshrc
