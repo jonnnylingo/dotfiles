@@ -15,6 +15,8 @@ if [ -f ${TOML_FILE} ]; then
   echo "Backing up .config/chezmoi/chezmoi.toml"
   timestamp=$(date +%Y-%m-%d$Y-%H%M%S)
   mv ${TOML_FILE} ${TOML_FILE}-timestamp
+else
+  brew install chezmoi
 fi
 
 refresh_dot_files
