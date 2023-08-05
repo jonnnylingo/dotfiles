@@ -9,7 +9,6 @@ refresh_dot_files() {
   echo "Applying dotfiles with chezmoi ..."
   chezmoi init --apply --verbose https://github.com/jonnnylingo/dotfiles.git
   chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
-  source ~/.zshrc
 }
 
 if [ -f ${TOML_FILE} ]; then
@@ -28,7 +27,9 @@ if [ -d ~/.oh-my-zsh ]; then
   mv ~/.oh-my-zsh ~/.oh-my-zsh-${TIMESTAMP}
 fi
 
-
+# installing oh-my-zas
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+source ~/.zshrc
 
 echo "sourcing .zshrc"
 sh -c '(echo "source .bashrc" >> ~/.zshrc)'
