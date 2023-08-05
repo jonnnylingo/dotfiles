@@ -27,8 +27,8 @@ echo "backing up .oh-my-zsh"
 if [ -d ~/.oh-my-zsh ]; then
   mv ~/.oh-my-zsh ~/.oh-my-zsh-${TIMESTAMP}
 fi
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-sh -c "$(echo 'source .bashrc' >> ~/.zshrc)"
-
-source ~/.zshrc
+echo "sourcing .zshrc"
+sh -c '(echo "source .bashrc" >> ~/.zshrc)'
