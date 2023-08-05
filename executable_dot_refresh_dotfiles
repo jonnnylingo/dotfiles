@@ -25,5 +25,4 @@ refresh_dot_files
 #install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo 'source .aliases' >> ~/.zshrc
-echo 'source .bashrc' >> ~/.zshrc
+sed -i '1s/^/\source .bashrc\n/' ~/.zshrc
