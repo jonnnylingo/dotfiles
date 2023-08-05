@@ -30,4 +30,4 @@ if [ -d ~/.oh-my-zsh ]; then
 fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-sh -c "$( sed -i '1s/^/\source .bashrc\n/' ~/.zshrc)"
+sh -c "$(echo 'source .bashrc' >> ~/.zshrc)"
