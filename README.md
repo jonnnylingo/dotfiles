@@ -48,14 +48,14 @@ Copy all your ".something" files into the corresponding "dot_something" file in 
 # Maintenance
 If you want to refresh dot files on your current Mac, just run:
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jonnnylingo/dotfiles/main/executable_dot_backup)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jonnnylingo/dotfiles/main/executable_dot_backup_dotfiles)"
 ```
 
 This script will take all your ~/.* files and copy them to a .dot_backkup file so you can refresh all your dot files from the repo.  
 
 Then run this script to refresh your dot files (WARNING: Your current dotfiles will be overwritten.  It's a good idea to back them up.):
 ```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jonnnylingo/dotfiles/main/executable_dot_refresh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jonnnylingo/dotfiles/main/executable_dot_refresh_dotfiles)"
 ```
 
 ---
