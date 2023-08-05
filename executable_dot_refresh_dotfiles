@@ -27,9 +27,15 @@ if [ -d ~/.oh-my-zsh ]; then
   mv ~/.oh-my-zsh ~/.oh-my-zsh-${TIMESTAMP}
 fi
 
-# installing oh-my-zas
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-source ~/.zshrc
+install_ohmyzsh() {
+  # installing oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  
+  echo "sourcing .zshrc"
+  sh -c '(echo "source .bashrc" >> ~/.zshrc)'
+  source ~/.zshrc
+}
 
-echo "sourcing .zshrc"
-sh -c '(echo "source .bashrc" >> ~/.zshrc)'
+install_ohmyzsh
+
+
