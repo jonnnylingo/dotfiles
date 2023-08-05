@@ -30,3 +30,5 @@ fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 sh -c "$(echo 'source .bashrc' >> ~/.zshrc)"
+
+source ~/.zshrc
