@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Set toml filename
 TOML_FILE="$HOME/.config/chezmoi/chezmoi.toml"
