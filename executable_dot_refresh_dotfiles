@@ -4,15 +4,22 @@
 TOML_FILE="~/.config/chezmoi/chezmoi.toml"
 TIMESTAMP=$(date +%Y-%m-%d$Y-%H%M%S)
 
-# Install oh-my-sh
-# Backup old .oh-my-zsh directory
-echo "backing up .oh-my-zsh"
-if [ -d ~/.oh-my-zsh ]; then
-  mv ~/.oh-my-zsh ~/.oh-my-zsh-${TIMESTAMP}
-fi
 
+pre_install_tasks() {
+  echo "Unsetting ZSH variable..."
+  ZSH= 
+
+  echo "backing up .oh-my-zsh"
+  if [ -d ~/.oh-my-zsh ]; then
+    mv ~/.oh-my-zsh ~/.oh-my-zsh-${TIMESTAMP}
+  fi
+}
+
+
+# Install oh-my-sh
 install_ohmyzsh() {
-  # installing oh-my-zsh
+  pre_install_tasks
+
   echo "Installing oh-my-zsh..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 }
