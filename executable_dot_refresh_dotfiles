@@ -7,7 +7,7 @@ TIMESTAMP=$(date +%Y-%m-%d$Y-%H%M%S)
 
 pre_install_tasks() {
   echo "Unsetting ZSH variable..."
-  ZSH= sh install.sh
+  ZSH= 
 
   echo "backing up .oh-my-zsh"
   if [ -d ~/.oh-my-zsh ]; then
