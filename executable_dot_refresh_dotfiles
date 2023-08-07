@@ -4,7 +4,18 @@
 TOML_FILE="$HOME/.config/chezmoi/chezmoi.toml"
 TIMESTAMP=$(date +%Y-%m-%d$Y-%H%M%S)
 
-# Make it happen
+# Install oh-my-sh
+install_ohmyzsh() {
+  # installing oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  
+  echo "sourcing .zshrc"
+  sh -c '(echo "source .bashrc" >> ~/.zshrc)'
+  source ~/.zshrc
+}
+install_ohmyzsh
+
+# Update dot files
 refresh_dot_files() {
   echo "Applying dotfiles with chezmoi ..."
   chezmoi init --apply --verbose https://github.com/jonnnylingo/dotfiles.git
@@ -17,25 +28,4 @@ if [ -f ${TOML_FILE} ]; then
 else
   brew install chezmoi
 fi
-
-# Make fresh copy of dot_files
 refresh_dot_files
-
-#install oh-my-zsh
-echo "backing up .oh-my-zsh"
-if [ -d ~/.oh-my-zsh ]; then
-  mv ~/.oh-my-zsh ~/.oh-my-zsh-${TIMESTAMP}
-fi
-
-install_ohmyzsh() {
-  # installing oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  
-  echo "sourcing .zshrc"
-  sh -c '(echo "source .bashrc" >> ~/.zshrc)'
-  source ~/.zshrc
-}
-
-install_ohmyzsh
-
-
