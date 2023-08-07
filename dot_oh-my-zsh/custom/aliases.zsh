@@ -11,5 +11,5 @@
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr
 
-alias ll="ls -al"
+alias lll="ls -al"
 alias hg="history|grep "
