@@ -1,3 +1,4 @@
+
 #!/bin/zsh
 
 # Set toml filename
@@ -29,7 +30,9 @@ install_ohmyzsh
 refresh_dot_files() {
   echo "Applying dotfiles with chezmoi ..."
   chezmoi init --apply --verbose https://github.com/jonnnylingo/dotfiles.git
-  chmod +x "$HOME/.oh-my-zsh/custom/aliases.zsh"
+
+  echo "Setting Permissions on .zsh files..."
+  chmod +x "$HOME/.oh-my-zsh/custom/*.zsh"
   chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
 }
 
