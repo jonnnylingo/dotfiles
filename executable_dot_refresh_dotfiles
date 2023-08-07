@@ -29,7 +29,7 @@ install_ohmyzsh
 refresh_dot_files() {
   echo "Applying dotfiles with chezmoi ..."
   chezmoi init --apply --verbose https://github.com/jonnnylingo/dotfiles.git
-  chmod +x "$HOME/.oh-my-zsh/custom/*.zsh"
+  chmod +x "$HOME/.oh-my-zsh/custom/aliases.zsh"
   chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
 }
 
