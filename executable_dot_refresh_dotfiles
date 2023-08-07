@@ -13,11 +13,8 @@ fi
 
 install_ohmyzsh() {
   # installing oh-my-zsh
+  echo "Installing oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  
-  echo "sourcing .zshrc"
-  sh -c '(echo "source .bashrc" >> ~/.zshrc)'
-  source ~/.zshrc
 }
 install_ohmyzsh
 
