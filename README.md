@@ -58,6 +58,13 @@ Then run this script to refresh your dot files (WARNING: Your current dotfiles w
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/jonnnylingo/dotfiles/main/executable_dot_refresh_dotfiles)"
 ```
 
+# Oh-My-Zsh
+My configuration is using the [oh-my-zsh](https://ohmyz.sh/) framework.  
+
+Place any custom changes in the dot_oh-my-zsh/custom folder with a '.zsh' extenstion.  Oh-my-zsh will read those files last and override any aliases or other settings from Oh-my-zsh.  
+
+Chezmoi will place the custom files in the custom folder.  If for some reason, the custom files are not being read, delete any .zcompdump* files in your home directory.  For more oh-my-zsh troubleshooting see... https://github.com/ohmyzsh/ohmyzsh/wiki/Troubleshooting
+
 ---
 ### Other Resources
 Look-up Homebrew Formlae: [https://formulae.brew.sh/cask/](https://formulae.brew.sh/cask/)
