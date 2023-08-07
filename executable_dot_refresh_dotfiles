@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Set toml filename
-TOML_FILE="$HOME/.config/chezmoi/chezmoi.toml"
+TOML_FILE="~/.config/chezmoi/chezmoi.toml"
 TIMESTAMP=$(date +%Y-%m-%d$Y-%H%M%S)
 
 # Install oh-my-sh
