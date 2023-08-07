@@ -31,7 +31,7 @@ refresh_dot_files() {
   chezmoi init --apply --verbose https://github.com/jonnnylingo/dotfiles.git
 
   echo "Setting Permissions on .zsh files..."
-  l $HOME/.oh-my-zsh/custom/*.zsh
+  ls $HOME/.oh-my-zsh/custom/*.zsh
   chmod +x $HOME/.oh-my-zsh/custom/*.zsh
   chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
 }
